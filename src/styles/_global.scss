@@ -1,0 +1,249 @@
+@font-face {
+  font-family: "Janna LT Bold";
+  src: url("../../public/Janna\ LT\ Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed Bold";
+  src: url("../../public/Arial\ Narrow/arialnarrow_bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.arabic-font {
+  font-family: "Janna LT Bold", sans-serif;
+}
+
+.non-arabic-font {
+  font-family: "Roboto Condensed Bold", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  font-family: "Janna LT Bold";
+}
+
+.container-kirill {
+  max-width: 1020px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20vh;
+}
+
+a {
+  text-decoration: none;
+  color: #53565a;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.error-outline {
+  outline: 2px solid red;
+}
+
+button {
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.mobile-language-toggle-menu {
+  cursor: pointer;
+}
+
+h3 {
+  color: #fff;
+}
+
+.offers-wrapper {
+  .container {
+    max-width: 1030px;
+    width: 90%;
+    margin: 0 auto;
+    .main-offers-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      @media (max-width: 460px) {
+        max-width: 460px;
+        background-color: #006491;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      h2 {
+        font-size: 30.64px;
+        color: rgb(0, 144, 255);
+        font-weight: 700;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        @media (max-width: 470px) {
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+      button {
+        cursor: pointer;
+        background-color: rgb(255, 0, 0);
+        width: 186px;
+        height: 49px;
+        font-size: 15px;
+        font-weight: 700;
+        border: none;
+        color: #fff;
+      }
+      .main-offers-line {
+        background-color: rgb(138, 138, 138);
+        width: 108px;
+        height: 2px;
+        z-index: 4;
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &-middle {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.main-offers-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  @media (max-width: 375px) {
+    flex-direction: column;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
+  img {
+    max-width: 47.3vw;
+    height: auto;
+    object-fit: contain;
+    @media (max-width: 375px) {
+      max-width: 83vw;
+    }
+    @media (max-width: 425px) {
+      max-width: 83vw;
+    }
+  }
+}
+
+.main-small-offers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: 375px) {
+    gap: 10px;
+    justify-content: baseline;
+    flex-direction: row;
+  }
+  @media (max-width: 425px) {
+    gap: 10px;
+    justify-content: baseline;
+    flex-direction: row;
+  }
+  img {
+    max-width: 14vw; /* картинка будет занимать 50% ширины видимой области экрана */
+    height: auto;
+    @media (max-width: 375px) {
+      max-width: 40vw;
+    }
+    @media (max-width: 425px) {
+      max-width: 40vw;
+    }
+  }
+}
+
+.main-last-offer {
+  max-width: 63vw;
+  height: auto;
+  @media (max-width: 375px) {
+    max-width: 83vw;
+  }
+  @media (max-width: 425px) {
+    max-width: 83vw;
+  }
+}
+
+.Toastify {
+  @media (max-width: 480px) {
+    scale: 0.8;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+.to_checkout_btn {
+  margin: auto;
+  display: flex;
+  justify-content: end;
+  margin-top: 70px;
+  @media (max-width: 425px) {
+    justify-content: center;
+  }
+  button {
+    background-color: rgb(255, 0, 0);
+    width: 222px;
+    height: 47px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.choose-product-rtl {
+  direction: rtl;
+}
+
+.continue-fixed {
+  position: fixed;
+  bottom: 20px; /* расстояние от нижнего края страницы */
+  right: 20px; /* расстояние от правого края страницы */
+  padding: 10px 20px;
+  background-color: red; /* цвет фона кнопки */
+  color: #fff; /* цвет текста кнопки */
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart_footer {
+  background: #fff;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  height: 49px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

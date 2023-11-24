@@ -1,0 +1,69 @@
+footer {
+  background-color: #dbdbdb;
+
+  .content {
+    max-width: 1020px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .navigation-items {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .item {
+        color: #53565a;
+        font-size: 14px;
+        cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+          margin-bottom: 1rem;
+        }
+
+        .item-stick {
+          margin: 0 1rem;
+
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .social-items {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+}
+
+.app-store,
+.google-play,
+.app-gallery {
+  img {
+    width: 160px;
+  }
+}
+
+.info {
+  color: #53565a;
+  font-size: 14px;
+}
+
+.facebook,
+.twitter,
+.instagram,
+.youtube {
+  img {
+    height: 21px;
+  }
+}

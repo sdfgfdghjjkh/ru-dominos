@@ -1,0 +1,176 @@
+.loader-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background-color: rgb(244, 250, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 99999999999;
+  .loader-content {
+    margin: auto;
+    @media (max-width: 425px) {
+      scale: 0.5;
+    }
+    .Logo {
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      img {
+        width: 160px;
+      }
+    }
+    .loader {
+      margin-top: 50px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+}
+
+// $line-width: 20px; // Ширина линии
+// $segment-width: $line-width / 16; // Ширина каждого сегмента (8 красных + 8 белых)
+// $skew-angle: -15deg; // Угол наклона в градусах влево
+// $border-radius: 5px; // Радиус скругления углов
+
+// .container {
+//   width: $line-width;
+//   height: $segment-width;
+//   display: flex;
+//   justify-content: space-evenly;
+//   scale: 30;
+//   .segment {
+//     height: 100%;
+//     flex: 1;
+//     transform: skewX($skew-angle); // Применяем наклон к каждому сегменту
+
+//     &:first-child {
+//       border-top-left-radius: $border-radius; // Округляем верхний левый угол первого сегмента
+//       border-bottom-left-radius: $border-radius; // Округляем нижний левый угол первого сегмента
+//     }
+
+//     &:last-child {
+//       border-top-right-radius: $border-radius; // Округляем верхний правый угол последнего сегмента
+//       border-bottom-right-radius: $border-radius; // Округляем нижний правый угол последнего сегмента
+//     }
+//   }
+
+//   // Создаем чередующиеся красные и белые сегменты с использованием :nth-child
+//   .segment:nth-child(odd) {
+//     background-color: red;
+//   }
+
+//   .segment:nth-child(even) {
+//     background-color: white;
+//   }
+// }
+
+// $line-width: 20px;
+// $segment-width: $line-width / 16;
+// $skew-angle: -15deg;
+// $border-radius: 5px;
+
+// .container {
+//   width: $line-width;
+//   height: $segment-width;
+//   display: flex;
+//   overflow: hidden;
+//   scale: 20;
+//   .segment {
+//     height: 100%;
+//     flex: 1;
+//     transform: skewX($skew-angle);
+//     transition: transform 2s linear;
+    
+//     &:first-child {
+//       border-top-left-radius: $border-radius;
+//       border-bottom-left-radius: $border-radius;
+//     }
+
+//     &:last-child {
+//       border-top-right-radius: $border-radius;
+//       border-bottom-right-radius: $border-radius;
+//     }
+//   }
+
+//   .segment:nth-child(odd) {
+//     background-color: red;
+//   }
+
+//   .segment:nth-child(even) {
+//     background-color: white;
+//   }
+// }
+
+// @keyframes moveSegments {
+//   0% {
+//     transform: skewX($skew-angle);
+//   }
+//   100% {
+//     transform: skewX(0deg);
+//   }
+// }
+
+// .container .segment {
+//   animation: moveSegments 2s linear infinite;
+// }
+
+
+// styles.scss
+
+$line-width: 20px; // Ширина линии
+$segment-width: $line-width / 16; // Ширина каждого сегмента (8 красных + 8 белых)
+$skew-angle: -15deg; // Угол наклона в градусах влево
+$border-radius: 5px; // Радиус скругления углов
+$animation-duration: 1s; // Длительность анимации
+
+.line {
+  width: $line-width;
+  height: $segment-width;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  position: relative;
+  scale: 20;
+
+  .segment {
+    height: 100%;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transform: skewX($skew-angle); // Применяем наклон к каждому сегменту
+
+    &:first-child {
+      border-top-left-radius: $border-radius; // Округляем верхний левый угол первого сегмента
+      border-bottom-left-radius: $border-radius; // Округляем нижний левый угол первого сегмента
+    }
+
+    &:last-child {
+      border-top-right-radius: $border-radius; // Округляем верхний правый угол последнего сегмента
+      border-bottom-right-radius: $border-radius; // Округляем нижний правый угол последнего сегмента
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient($skew-angle, red, red $segment-width, white $segment-width, white calc(2 * #{$segment-width}));
+      animation: move-line $animation-duration infinite linear;
+    }
+  }
+
+  @keyframes move-line {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

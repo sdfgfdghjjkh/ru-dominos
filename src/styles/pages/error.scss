@@ -1,0 +1,46 @@
+.error-page {
+  position: relative;
+  height: 60vh;
+
+  @media (max-width: 425px) {
+    img {
+      height: 5rem;
+    }
+  }
+
+  .text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 520px;
+    width: 100%;
+    padding: 0 1rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: none;
+
+      @media (max-width: 425px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+
+  button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 60%;
+    margin-top: 1rem;
+  }
+}

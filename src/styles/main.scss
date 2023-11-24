@@ -1,0 +1,17 @@
+@import "./_global.scss";
+
+// Layout
+@import "./layout/navbar.scss";
+@import "./layout/footer.scss";
+
+// Pages
+@import "./pages/home.scss";
+@import "./pages/offers.scss";
+@import "./pages/codeConfirm.scss";
+@import "./pages/menu.scss";
+@import "./pages/category.scss";
+@import "./pages/error.scss";
+@import "./pages/loader.scss";
+
+// @import "./checkout.scss";
+@import "./compStyles/mini-cart.scss";
