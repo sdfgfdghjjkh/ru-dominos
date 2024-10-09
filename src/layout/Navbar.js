@@ -1,15 +1,15 @@
 import Logo from "../images/dpz-logo.svg";
 import BurgerMenu from "../components/BurgerMenu";
-import LanguageToggle from "../components/LanguageToggle";
+// import LanguageToggle from "../components/LanguageToggle";
 
 import Cart from "../components/Cart";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ isArabic, toggleLanguage }) => {
   const navItems = [
-    isArabic ? "العروض" : "ORDER ONLINE",
-    isArabic ? "للطلب" : "MENU",
-    isArabic ? "القائمة" : "OFFERS",
+    isArabic ? "العروض" : "ЗАКАЗАТЬ ОНЛАЙН",
+    isArabic ? "للطلب" : "МЕНЮ",
+    isArabic ? "القائمة" : "АКЦЦИИ",
   ];
 
   return (
@@ -32,11 +32,11 @@ const Navbar = ({ isArabic, toggleLanguage }) => {
         </section>
       </section>
       <div className={`panel ${isArabic ? "rtl" : "ltr"}`}>
-        <LanguageToggle
+        {/* <LanguageToggle
           mobileClass="mobile-language-toggle-menu"
           toggleLanguage={toggleLanguage}
           isArabic={isArabic}
-        />
+        /> */}
         <Cart isArabic={isArabic} />
       </div>
     </nav>

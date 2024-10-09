@@ -12,7 +12,7 @@ const SelectedDrinks = ({ isArabic }) => {
   useEffect(() => {
     setDrinkProducts(
       productItems
-        .filter((product) => product.category === "Drinks")
+        .filter((product) => product.category === "drink")
         .map((el) => {
           return {
             ...el,
@@ -75,7 +75,7 @@ const SelectedDrinks = ({ isArabic }) => {
       });
       setChoosenProducts(offerMeals.filter((el) => el.name !== item.name));
     }
-    const filteredDrinks = offerMeals.filter((el) => el.category === "Drinks");
+    const filteredDrinks = offerMeals.filter((el) => el.category === "drink");
     if (offerType == "meal_one") {
       if (filteredDrinks.length <= 1) {
         if (filteredDrinks.length === 1) {
@@ -171,7 +171,7 @@ const SelectedDrinks = ({ isArabic }) => {
   // }, [offerMeals]);
 
   const handleCheckout = () => {
-    const filteredDrinks = offerMeals.filter((item) => item.category === "Drinks");
+    const filteredDrinks = offerMeals.filter((item) => item.category === "drink");
     if (offerType === "meal_one" && filteredDrinks.length === 1) {
       navigate("/checkout", { state: { offer: offerMeals } });
     } else if (offerType === "meal_two" && filteredDrinks.length === 2) {
@@ -186,14 +186,14 @@ const SelectedDrinks = ({ isArabic }) => {
       </h1>
       */}
       <button onClick={handleCheckout} className="continue-fixed">
-        {isArabic ? "يكمل" : "Continue"}
+        {isArabic ? "يكمل" : "Продолжить"}
       </button>
       <h2 className={isArabic ? "choose-product-rtl" : "choose-product-ltr"}>
-        {isArabic ? `اختر ${drinksCount} أي مشروب` : `Choose ${drinksCount} any drinks`}
+        {isArabic ? `اختر ${drinksCount} أي مشروب` : `Выберите ${drinksCount}`}
       </h2>
       <>
         <div style={{ marginTop: "50px" }} className={`fill-bar ${isArabic ? "rtl" : "ltr"}`}>
-          <span>{isArabic ? "مشروبات" : "Drinks"}</span>
+          <span>{isArabic ? "مشروبات" : "Напитки"}</span>
         </div>
         <div className={`product-list ${isArabic ? "rtl" : "ltr"}`}>
           {drinkProducts?.map((product, index) => (
@@ -201,11 +201,11 @@ const SelectedDrinks = ({ isArabic }) => {
               <img src={product.image} alt={product.name} />
               {product?.choosen ? (
                 <button onClick={() => chooseDrink(product)} className="added_to_order_btn">
-                  {isArabic ? "مختار" : "CHOOSEN"}
+                  {isArabic ? "مختار" : "ВЫБРАНО"}
                 </button>
               ) : (
                 <button onClick={() => chooseDrink(product)} className="add_to_order_btn">
-                  {isArabic ? "يختار" : "CHOOSE"}
+                  {isArabic ? "يختار" : "ВЫБРАТЬ"}
                 </button>
               )}
               <h2 className={`product-heading ${isArabic ? "rtl" : "ltr"}`}>

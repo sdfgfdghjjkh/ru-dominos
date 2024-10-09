@@ -28,7 +28,7 @@ const Offers = ({ isArabic }) => {
     } else if (offer == "meal_two") {
       navigate("/offer/pizzas", { state: { offer } });
     } else if (offer == "menu") {
-      navigate("/menu/Pizzas");
+      navigate("/menu/pizza");
     }
   };
 
@@ -40,8 +40,8 @@ const Offers = ({ isArabic }) => {
         <div className="main-offers-top">
           <div className="main-offers-line"></div>
           <div className="main-offers-top-middle">
-            <h2>START YOUR ORDER FOR</h2>
-            <button onClick={handleOrder}>DELIVERY</button>
+            <h2>ЗДЕЛАЙТЕ ЗАКАЗ УЖЕ СЕЙЧАС</h2>
+            <button onClick={handleOrder}>ДОСТАВКА</button>
           </div>
           <div className="main-offers-line"></div>
         </div>

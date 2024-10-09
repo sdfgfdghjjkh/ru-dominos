@@ -13,7 +13,7 @@ const SelectedOffer = ({ isArabic }) => {
   useEffect(() => {
     setPizzaProducts(
       productItems
-        .filter((product) => product.category === "Pizzas")
+        .filter((product) => product.category === "pizza")
         .map((el) => {
           return {
             ...el,
@@ -61,7 +61,7 @@ const SelectedOffer = ({ isArabic }) => {
       });
       setChoosenProducts(offerMeals.filter((el) => el.name !== item.name));
     } else {
-      const filteredPizzas = offerMeals.filter((el) => el.category === "Pizzas");
+      const filteredPizzas = offerMeals.filter((el) => el.category === "pizza");
       if (offerType === "get_free") {
         if (choosenProducts.length === 4) {
           setChoosenProducts([]);
@@ -215,7 +215,7 @@ const SelectedOffer = ({ isArabic }) => {
   const pizzaCount = pizzaForChoose();
 
   const handleCheckout = () => {
-    const filteredPizzas = offerMeals.filter((item) => item.category === "Pizzas");
+    const filteredPizzas = offerMeals.filter((item) => item.category === "pizza");
     if (offerType === "get_free" && choosenProducts.length == 4) {
       navigate("/checkout", { state: { offer: choosenProducts } });
     } else if (offerType === "meal_one" && filteredPizzas.length === 1) {
@@ -228,13 +228,13 @@ const SelectedOffer = ({ isArabic }) => {
   return (
     <section>
       <button onClick={handleCheckout} className="continue-fixed">
-        {isArabic ? "يكمل" : "Continue"}
+        {isArabic ? "يكمل" : "Продолжить"}
       </button>
       <h2 className={isArabic ? "choose-product-rtl" : "choose-product-ltr"}>
-        {isArabic ? `اختر ${pizzaCount} بيتزا من أي نوع` : `Choose ${pizzaCount} any pizzas`}
+        {isArabic ? `اختر ${pizzaCount} بيتزا من أي نوع` : `Выберите ${pizzaCount}`}
       </h2>
       <div style={{ marginTop: "50px" }} className={`fill-bar ${isArabic ? "rtl" : "ltr"}`}>
-        <span>{isArabic ? "بيتزا" : "Pizzas"}</span>
+        <span>{isArabic ? "بيتزا" : "Пиццы"}</span>
       </div>
 
       <div className={`product-list ${isArabic ? "rtl" : "ltr"}`}>

@@ -10,27 +10,27 @@ import ExtrasCategory from "../images/categories/extras.png";
 
 const MenuPage = ({ isArabic }) => {
   const categories = [
-    { name: "Pizzas", image: PizzaCategory, arabicName: "البيتزا" },
-    { name: "Chicken", image: ChickenCategory, arabicName: "الدجاج" },
-    { name: "Sides", image: SidesCategory, arabicName: "المقبلات" },
-    { name: "Drinks", image: DrinksCategory, arabicName: "المشروبات" },
-    { name: "Desserts", image: DessertsCategory, arabicName: "الحلويات" },
-    { name: "Extras", image: ExtrasCategory, arabicName: "إضافات" },
+    { name: "Пицца", image: PizzaCategory, arabicName: "البيتزا", category:  "pizza" },
+    { name: "Курица", image: ChickenCategory, arabicName: "الدجاج", category: "chicken" },
+    { name: "Хлеб", image: SidesCategory, arabicName: "المقبلات", category: "side" },
+    { name: "Напитки", image: DrinksCategory, arabicName: "المشروبات", category: "drink" },
+    { name: "Дессерты", image: DessertsCategory, arabicName: "الحلويات", category: "dessert" },
+    { name: "Соусы", image: ExtrasCategory, arabicName: "إضافات", category: "extra" },
   ];
   
 
   return (
     <section className={`category-block ${isArabic ? "rtl" : "ltr"}`}>
       
-      <h1>{isArabic ? "قائمة دومينو الوطنية" : "DOMINO'S NATIONAL MENU"}</h1>
+      <h1>{isArabic ? "قائمة دومينو الوطنية" : "Национальное меню DOMINO'S"}</h1>
       <p>
         {isArabic
           ? "لرؤية الأسعار والعروض والعناصر المتاحة بالضبط لك ، حدد متجرك المحلي. خصم 50٪ لجميع القائمة"
-          : "To see prices, offers, and exactly what items are available to you, select your local store. -50% discount for all menu"}
+          : "Чтобы увидеть цены, предложения и точно узнать, какие товары доступны вам, выберите местный фелиал. -50% скидка на все меню."}
       </p>
       <div className={`category-list ${isArabic ? "rtl" : "ltr"}`}>
         {categories.map((category, index) => (
-          <Link key={index} to={`/menu/${category.name}`} className="item">
+          <Link key={index} to={`/menu/${category.category}`} className="item">
             <img src={category.image} alt={category.name} className={isArabic ? "reversed" : ""} />
             <h2 className="name-category">{isArabic ? category.arabicName : category.name}</h2>
           </Link>

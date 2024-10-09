@@ -64,7 +64,7 @@ function Layout({ isArabic, toggleLanguage }) {
       <header>
         <Navbar isArabic={isArabic} toggleLanguage={toggleLanguage} />
       </header>
-      <main className="container-kirill">
+      <main className="container-main">
         <Outlet />
       </main>
       <footer>

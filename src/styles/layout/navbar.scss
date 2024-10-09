@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 76px;
+    height: 62px;
 
     .items {
       display: flex;
@@ -28,8 +28,14 @@ header {
         height: 2.8rem;
         width: 2.8rem;
         @media (max-width: 768px) {
-          margin: 0 1.5rem;
+          display: none;
         }
+      }
+
+      .logo-burger {
+        height: 2.8rem;
+        width: 2.8rem;
+        margin-bottom: 1rem;
       }
 
       .nav-items {
@@ -37,8 +43,8 @@ header {
         .item {
           font-size: 14px;
           text-align: center;
-          height: 76px;
-          padding: 25px 16px 0 16px;
+          height: 62px;
+          padding: 21px 16px 0 16px;
           transition: background-color 0.1s linear;
           &:hover {
             background-color: #005177;

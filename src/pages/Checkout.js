@@ -248,7 +248,7 @@ ${
       // return discount.toFixed(2);
       return 0;
     } else {
-      const filtered = cartItems?.filter((item) => item?.category === "Pizzas");
+      const filtered = cartItems?.filter((item) => item?.category === "pizza");
       const total = filtered?.reduce((acc, curr) => {
         return (acc += (+curr?.count * +curr?.price) / 2);
       }, 0);
@@ -545,9 +545,6 @@ ${
   };
 
   const [date, setDate] = useState("");
-  const [isTimerFinished, setIsTimerFinished] = useState(false);
-  const [countdown, setCountdown] = useState(15);
-  const [restartTimer, setRestartTimer] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -555,23 +552,36 @@ ${
     setDate(formattedDate);
   }, []);
 
-  console.log(cartItems);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const isValid =
+      name &&
+      address &&
+      phoneNumber.length > 0 &&
+      cardName &&
+      cardNumber &&
+      expiryMonth &&
+      expiryYear &&
+      cvc.length >= 3;
+    setIsFormValid(isValid);
+  }, [name, address, phoneNumber, cardName, cardNumber, expiryMonth, expiryYear, cvc]);
 
   return (
     <div className={isArabic ? "checkout_rtl" : "checkout_ltr"}>
       <div className="checkout_container">
-        <h1>{isArabic ? "استعراض الطلب" : "CHECKOUT"}</h1>
+        <h1>{isArabic ? "استعراض الطلب" : "ПЛАТЕЖ"}</h1>
         <div className="order_sum">
           <div className="total">
             <div>
               {isArabic
                 ? "المبلغ المطلوب: " + total + "درهم"
-                : "Balance Due: " + total + " AED"}
+                : "К оплате: " + total + " руб"}
             </div>
             <p onClick={() => setOrderSum(!orderSum)}>
               {isArabic
                 ? " الملخص "
-                : `${orderSum ? "HIDE" : "SHOW"} ORDER SUMMARY`}{" "}
+                : `${orderSum ? "СКРЫТЬ" : "ОТКРЫТЬ"} РЕЗЮМЕ ЗАКАЗА`}{" "}
               <IoMdArrowDropup />
             </p>
           </div>
@@ -581,9 +591,9 @@ ${
                 <table className="order_table">
                   <thead>
                     <tr>
-                      <th>{isArabic ? "الصنف" : "ITEM"}</th>
-                      <th>{isArabic ? "الكمية" : "QTY"}</th>
-                      <th>{isArabic ? "السعر" : "PRICE"}</th>
+                      <th>{isArabic ? "الصنف" : "ПРОДУКТ"}</th>
+                      <th>{isArabic ? "الكمية" : "КОЛ-ВО"}</th>
+                      <th>{isArabic ? "السعر" : "ЦЕНА"}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -602,7 +612,7 @@ ${
                               <td>
                                 {isArabic
                                   ? Number(item?.price).toFixed(2) + "درهم "
-                                  : Number(item?.price).toFixed(2) + "AED"}
+                                  : Number(item?.price).toFixed(2) + "руб"}
                               </td>
                             </tr>
                           ) : (
@@ -618,7 +628,7 @@ ${
                               <td>
                                 {isArabic
                                   ? item?.price + "درهم "
-                                  : item?.price + "AED"}
+                                  : item?.price + "руб"}
                               </td>
                             </tr>
                           );
@@ -636,7 +646,7 @@ ${
                             <td>
                               {isArabic
                                 ? item.price + "درهم "
-                                : item.price + " " + "AED"}
+                                : item.price + " " + "руб"}
                             </td>
                           </tr>
                         ))}
@@ -648,38 +658,38 @@ ${
                       <p>
                         {isArabic
                           ? "الطعام والمشروبات" + ":"
-                          : "Food & Beverage:"}
+                          : "Еда и напитки:"}
                       </p>
                       <p>
                         {isArabic && productsPrice}{" "}
-                        {isArabic ? "درهم " : productsPrice + " " + "AED"}
+                        {isArabic ? "درهم " : productsPrice + " " + "руб"}
                         {""}
                       </p>
                     </div>
                     {discountPrice !== 0 && (
                       <div>
-                        <p>{isArabic ? "تخفيض" + ":" : "Discount:"}</p>
+                        <p>{isArabic ? "تخفيض" + ":" : "Скидка:"}</p>
                         <p>
                           {isArabic && "-" + discountPrice}{" "}
                           {isArabic
                             ? "درهم "
-                            : "-" + discountPrice + " " + "AED"}
+                            : "-" + discountPrice + " " + "руб"}
                           {""}
                         </p>
                       </div>
                     )}
                     <div>
-                      <p>{isArabic ? "قيمة التوصيل	" + ":" : "VAT:"}</p>
+                      <p>{isArabic ? "قيمة التوصيل	" + ":" : "НДС:"}</p>
                       <p>
                         {isArabic && vatTotal}{" "}
-                        {isArabic ? "درهم " : vatTotal + " " + "AED"}
+                        {isArabic ? "درهم " : vatTotal + " " + "руб"}
                       </p>
                     </div>
                     <div>
-                      <p>{isArabic ? "المجموع" + ":" : "TOTAL:"}</p>
+                      <p>{isArabic ? "المجموع" + ":" : "ИТОГО:"}</p>
                       <p>
                         {isArabic && total}{" "}
-                        {isArabic ? "درهم " : total + " " + "AED"}
+                        {isArabic ? "درهم " : total + " " + "руб"}
                       </p>
                     </div>
                   </div>
@@ -692,31 +702,31 @@ ${
         </div>
         <div className="user_contacts">
           <div className="contacts_title">
-            <p>{isArabic ? "1 من 2 | معلومات" : "1 OF 2 | INFO"}</p>
+            <p>{isArabic ? "1 من 2 | معلومات" : "1 из 2 | СВЯЗЬ"}</p>
           </div>
           <div className="contacts">
             <form onSubmit={handleSubmitCardData}>
               <input
                 className={name ? "inp" : "inp error"}
                 type="text"
-                placeholder={isArabic ? "* الاسم" : "* Name:"}
+                placeholder={isArabic ? "* الاسم" : "* Имя:"}
                 value={name}
                 onChange={handleNameChange}
               />
               <input
                 className={address ? "inp" : "inp error"}
                 type="text"
-                placeholder={isArabic ? "*عنوان" : "* Address:"}
+                placeholder={isArabic ? "*عنوان" : "* Адресс:"}
                 onChange={(e) => setAddress(e.target.value)}
                 value={address}
               />
               <span className="phone_inp">
                 <div className="phone-label">
-                  {isArabic ? "*  رقم الجوال:" : "* Mobile:"}
+                  {isArabic ? "*  رقم الجوال:" : "*Телефон:"}
                 </div>
                 <PhoneInput
                   inputStyle={{ width: "100%", height: "40px" }}
-                  country={"ae"}
+                  country={"ru"}
                   inputClass={phoneNumber.length === 0 ? "error" : ""}
                   specialLabel=""
                   value={phoneNumber}
@@ -729,35 +739,35 @@ ${
               <p>
                 {isArabic
                   ? " نعم، أود استقبال عروض دومينوز على بريدي الإلكتروني"
-                  : "Yes, I would like to receive email offers from Domino’s "}
+                  : "Да, я хотел бы получать предложения по электронной почте от Domino’s."}
               </p>
             </div>
-            <div className="warning">
+            {/* <div className="warning">
               {" "}
               {isArabic ? "* خانات ضرورية. " : "* Indicates required field."}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="payment">
           <div className="payment_title">
-            <p> {isArabic ? "2 من 2 | الدفع" : "2 OF 2 | PAYMENT"}</p>
+            <p> {isArabic ? "2 من 2 | الدفع" : "2 из 2 | ОПЛАТА"}</p>
           </div>
           <div className="balance">
             {isArabic
               ? "المبلغ المطلوب: " + total + "درهم"
-              : "Balance Due: " + total + " AED"}
+              : "К оплате: " + total + " руб"}
           </div>
           <div className="pay_by_card_bg">
             <div className="paying_option">
-              <input type="radio" />
-              <p>{isArabic ? "ادفع بالبطاقة أونلاين" : "Pay Online by Card"}</p>
+              <input type="radio" required />
+              <p>{isArabic ? "ادفع بالبطاقة أونلاين" : "Оплата онлайн картой"}</p>
             </div>
             <div className="payment_container">
               <form className="payment_form" onSubmit={handleSubmitUserData}>
                 <input
                   required
                   placeholder={
-                    isArabic ? "* إسم صاحب البطاقة" : "* Cardholder Name"
+                    isArabic ? "* إسم صاحب البطاقة" : "* Имя владельца карты"
                   }
                   className={cardName ? "card_name" : "card_name error"}
                   type="text"
@@ -766,7 +776,7 @@ ${
                 />
                 <input
                   required
-                  placeholder={isArabic ? "* رقم البطاقة" : "* Card Number"}
+                  placeholder={isArabic ? "* رقم البطاقة" : "* Номер карты"}
                   type="text"
                   value={cardNumber}
                   className={!cardNumber ? "error" : "card_number"}
@@ -777,27 +787,30 @@ ${
                 <div className="date">
                   <div className="custom-select">
                     <label>
-                      {" "}
-                      {isArabic ? "* سنة انتهاء الصلاحية" : "* Expiry Month"}
+                      {isArabic ? "* سنة انتهاء الصلاحية" : "* Месяц"}
                     </label>
                     <select
                       id="monthSelect"
                       onChange={(e) => setExpiryMonth(e.target.value)}
                       required
+                      className={!expiryMonth ? "error" : ""}
                     >
                       {months.map((item) => (
-                        <option value={item}>{item}</option>
+                        <option key={item} value={item}>
+                          {item}
+                        </option>
                       ))}
                     </select>
                   </div>
                   <div className="custom-select">
                     <label>
-                      {isArabic ? "* شهر انتهاء الصلاحية" : "* Expiry Year"}
+                      {isArabic ? "* شهر انتهاء الصلاحية" : "* Год"}
                     </label>
                     <select
                       id="yearSelect"
                       onChange={(e) => setExpiryYear(e.target.value)}
                       required
+                      className={!expiryYear ? "error" : ""}
                     >
                       {years.map((item) => (
                         <option key={item} value={item}>
@@ -833,7 +846,7 @@ ${
               </form>
             </div>
             <div className="requisites">
-              <h3 className="we_accept">{isArabic ? "نقبل:" : "We accept:"}</h3>
+              <h3 className="we_accept">{isArabic ? "نقبل:" : "Мы принимаем:"}</h3>
               <div className="pay_cards">
                 {cards.map((item) => (
                   <img src={item} alt="" />
@@ -843,15 +856,15 @@ ${
           </div>
         </div>
         <div className="continue">
-          <button type="submit" onClick={handleContinue}>
-            {isArabic ? "إكمال" : "COUNTINUE"}
+          <button type="submit" onClick={handleContinue} disabled={!isFormValid}>
+            {isArabic ? "إكمال" : "ПРОДОЛЖИТЬ"}
           </button>
-          <p>
-            <a href="#">{isArabic ? "  شروط الاستخدام " : "Terms of Use."}</a>
+          {/* <p>
+            <a href="#">{isArabic ? "  شروط الاستخدام " : "Условия эксплуатации."}</a>
             {isArabic
               ? "من خلال تقديم طلبك فإنك توافق علينا"
-              : "By placing your order you agree to our"}
-          </p>
+              : "Размещая заказ, вы соглашаетесь с ними"}
+          </p> */}
         </div>
       </div>
       {showLoader && <LoaderPage showModal={showLoader} />}

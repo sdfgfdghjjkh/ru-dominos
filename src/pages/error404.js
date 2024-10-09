@@ -4,10 +4,10 @@ function Error404({ isArabic }) {
   const messages = {
     en: {
       title: "404",
-      pageNotFound: "Page Not Found",
+      pageNotFound: "Страница не найдена",
       description:
-        "The Page you are looking for doesn't exist or an other error occured. Go to",
-      linkText: "Home Page.",
+        "Страница, которую вы ищете, не существует или произошла другая ошибка. Перейдите на",
+      linkText: "Главную страницу.",
     },
     ar: {
       title: "404",

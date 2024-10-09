@@ -7,7 +7,7 @@ const LanguageToggle = ({ toggleLanguage, isArabic, mobileClass }) => {
       {isArabic ? (
         <div className="language">
           <img src={EnglishFlag} alt="" />
-          <span>English</span>
+          <span>Русский</span>
         </div>
       ) : (
         <div className="language">

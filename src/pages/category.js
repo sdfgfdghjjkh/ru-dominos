@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Size from "../components/Size";
+// import Size from "../components/Size";
 import ProductItem from "../components/ProductItem";
 
 const CategoryPage = ({ isArabic }) => {
@@ -20,7 +20,7 @@ const CategoryPage = ({ isArabic }) => {
   const notify = (product, size) => {
     const price = product.price || product.prices[size];
 
-    toast.success(isArabic ? "تمت الإضافة إلى سلة التسوق" : "Added To Cart", {
+    toast.success(isArabic ? "تمت الإضافة إلى سلة التسوق" : "Добавлено в корзину", {
       position: "bottom-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -30,7 +30,7 @@ const CategoryPage = ({ isArabic }) => {
       progress: undefined,
       theme: "light",
     });
-    if (categoryName === "Pizzas") {
+    if (categoryName === "pizza") {
       dispatch({ type: "ADD_TO_CART", payload: { ...product, size, price } });
     } else {
       dispatch({
@@ -40,8 +40,8 @@ const CategoryPage = ({ isArabic }) => {
     }
   };
 
-  const view = isArabic ? "عرض الكل" : "DOMINO’S SELECTION";
-  const viewPrice = isArabic ? "الأسعار متاحة عند الطلب" : "PRICING AVAILABLE WHEN ORDERING";
+  const view = isArabic ? "عرض الكل" : "ВЫБОР DOMINO’S";
+  const viewPrice = isArabic ? "الأسعار متاحة عند الطلب" : "ЦЕНА ДОСТУПНА ПРИ ЗАКАЗЕ";
 
   const arabicCategoryNames = {
     Pizzas: "البيتزا",

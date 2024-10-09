@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import successfully from "../images/SUCCESSFULLY.png"
+import successfully from "../images/SUCCESSFULLY.png";
 import { useEffect, useState } from "react";
 
 const SuccessfullyPage = ({ isArabic }) => {
   const messages = {
     en: {
-      title: "ORDER SUCCESSFULLY ACCEPTED",
-      btn: "Home",
+      title: "ЗАКАЗ УСПЕШНО ПРИНЯТ",
+      btn: "Главная",
     },
     ar: {
       title: "تم قبول الطلب بنجاح",

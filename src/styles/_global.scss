@@ -12,12 +12,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("../../public/PT_Sans/PTSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 .arabic-font {
   font-family: "Janna LT Bold", sans-serif;
 }
 
 .non-arabic-font {
-  font-family: "Roboto Condensed Bold", sans-serif;
+  font-family: "PT Sans Bold", sans-serif;
 }
 
 * {
@@ -33,10 +40,10 @@ input {
 }
 
 body {
-  font-family: "Janna LT Bold";
+  font-family: "PT Sans Bold";
 }
 
-.container-kirill {
+.container-main {
   max-width: 1020px;
   width: 90%;
   margin: 0 auto;

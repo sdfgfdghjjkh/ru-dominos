@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LanguageToggle from "./LanguageToggle";
 import { Link, useNavigate } from "react-router-dom";
+import Logo from "../images/dpz-logo.svg";
 
 const BurgerMenu = ({ toggleLanguage, isArabic }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,9 @@ const BurgerMenu = ({ toggleLanguage, isArabic }) => {
   };
 
   const navItems = [
-    isArabic ? "العروض" : "ORDER ONLINE",
-    isArabic ? "للطلب" : "MENU",
-    isArabic ? "القائمة" : "OFFERS",
+    isArabic ? "العروض" : "ЗАКАЗАТЬ ОНЛАЙН",
+    isArabic ? "للطلب" : "МЕНЮ",
+    isArabic ? "القائمة" : "АКЦЦИИ",
   ];
 
   const handleCLick = (route) => {
@@ -72,6 +73,9 @@ const BurgerMenu = ({ toggleLanguage, isArabic }) => {
       </div>
       <div className="menu-wrapper">
         <section className="menu-items" style={isArabic ? arabicMenuStyles : englishMenuStyles}>
+          <Link to="/" className="logo-burger">
+            <img src={Logo} alt="logo" />
+          </Link>
           <h3 onClick={() => handleCLick("")}>{navItems[0]}</h3>
           <h3 onClick={() => handleCLick("menu")}>{navItems[1]}</h3>
           <h3 onClick={() => handleCLick("offers")}>{navItems[2]}</h3>

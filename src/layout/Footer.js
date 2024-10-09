@@ -11,30 +11,26 @@ import AppGallery from "../images/footer/app-store-huawei.png";
 const Footer = ({ isArabic }) => {
   const footerItems = [
     {
-      text: isArabic ? "التغذية" : "Nutrition",
+      text: isArabic ? "التغذية" : "Питание",
       link: "http://cdn.dpz.bz/ae/nutritional_facts/UAE_NutritionalFacts.pdf",
     },
     {
-      text: isArabic ? "الدعم" : "Support",
-      link: "https://www.dominos.ae/en/pages/services/?p=customerFeedback",
-    },
-    {
-      text: isArabic ? "ردود الفعل" : "Feedback",
+      text: isArabic ? "ردود الفعل" : "Обратная связь",
       link: "http://feedbackdominos.com/",
     },
     {
-      text: isArabic ? "وظائف" : "Jobs",
+      text: isArabic ? "وظائف" : "Вакансии",
       link: "https://forms.office.com/r/R1ye7mkj9X",
     },
     {
-      text: isArabic ? "سياسة الخصوصية" : "Privacy Policy",
+      text: isArabic ? "سياسة الخصوصية" : "Политика Конфиденциальности",
       link: "https://www.dominos.ae/en/#/content/privacy/",
     },
   ];
 
   const info = isArabic
     ? "ضمان دومينوز: إذا لم تكن راضيا عن خدمتنا، سيتم تصحيح ذلك فوراً "
-    : "Our Guarantee: If you are not completely satisfied, we will make it right.";
+    : "Наша гарантия: если вы не полностью удовлетворены, мы исправим это.";
 
   return (
     <section className="content">
@@ -87,10 +83,10 @@ const Footer = ({ isArabic }) => {
             <img src={YouTube} alt="youtube" />
           </a>
         </div>
-        <div className="pepsi">
+        {/* <div className="pepsi">
           <img src={Sponsor} alt="pepsi" />
-        </div>
-        <div className="app-store">
+        </div> */}
+        {/* <div className="app-store">
           <a
             href="https://apps.apple.com/eg/app/dominos-pizza/id1077828937?platform=iphone"
             target="_blank"
@@ -116,7 +112,7 @@ const Footer = ({ isArabic }) => {
           >
             <img src={AppGallery} alt="app-gallery" />
           </a>
-        </div>
+        </div> */}
       </section>
 
       <p className={`info ${isArabic ? "rtl" : "ltr"}`}>{info}</p>

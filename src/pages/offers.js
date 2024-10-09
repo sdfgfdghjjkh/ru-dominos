@@ -14,7 +14,7 @@ import ArabicOfferSix from "../images/offers/ae/ae-offer-six.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const OffersPage = ({ isArabic }) => {
-  const currency = isArabic ? "درهم" : "AED";
+  const currency = isArabic ? "درهم" : "руб";
   const navigate = useNavigate();
 
   const offerItems = [
@@ -23,7 +23,7 @@ const OffersPage = ({ isArabic }) => {
       price: 94.44,
       description: {
         arabic: "3 بيتزا كبيرة + 10 قطع دجاج كيكرز + عصي الخبز + 2.28 لتر بيبسي",
-        english: "3 Large Pizzas + 10pcs Chicken Kickers + Breadsticks + 2.28L Pepsi",
+        english: "3 большие пиццы + 10 шт. куриных наггетсов + хлебные палочки + 2.28 л Pepsi",
       },
     },
     {
@@ -31,7 +31,7 @@ const OffersPage = ({ isArabic }) => {
       price: 75.99,
       description: {
         arabic: "3 بيتزا متوسطة + عصي الخبز + بطاطا مقلية + كراونيز + 2.28 لتر بيبسي",
-        english: "3 Medium Pizzas + Breadsticks + Potato Wedges + Crownies + 2.28L Pepsi",
+        english: "3 средние пиццы + хлебные палочки + картофельные дольки + Крауни + 2.28 л Pepsi",
       },
     },
     {
@@ -39,7 +39,7 @@ const OffersPage = ({ isArabic }) => {
       price: 80.99,
       description: {
         arabic: "3 بيتزا متوسطة + 8 قطع دجاج كيكرز + بطاطا مقلية + 2.28 لتر بيبسي",
-        english: "3 Medium Pizzas + 8pcs Chicken Kickers + Potato Wedges + 2.28L Pepsi",
+        english: "3 средние пиццы + 8 шт. куриных наггетсов + картофельные дольки + 2.28 л Pepsi",
       },
     },
     {
@@ -47,7 +47,7 @@ const OffersPage = ({ isArabic }) => {
       price: 65.99,
       description: {
         arabic: "2 بيتزا متوسطة + عصي الخبز + بطاطا مقلية + 2.28 لتر بيبسي",
-        english: "2 Medium Pizzas + Breadsticks + Potato Wedges + 2.28L Pepsi",
+        english: "2 средние пиццы + хлебные палочки + картофельные дольки + 2.28 л Pepsi",
       },
     },
     {
@@ -57,7 +57,7 @@ const OffersPage = ({ isArabic }) => {
         arabic:
           "احصل على 6 بيتزا كبيرة + 2 x 10 قطع دجاج كيكرز + 3 بطاطا مقلية + 2 كراونيز + 2 x 2.28 لتر بيبسي",
         english:
-          "Get 6 Large Pizzas + 2 x 10 Chicken Kickers + 3 Potato Wedges + 2 Crownies + 2 x 2.28L Pepsi",
+          "Получите 6 больших пицц + 2 × 10 куриных наггетсов + 3 картофельные дольки + 2 Крауни + 2 × 2.28 л Pepsi",
       },
     },
     {
@@ -67,7 +67,7 @@ const OffersPage = ({ isArabic }) => {
         arabic:
           "احصل على 10 بيتزا كبيرة + 3 x 10 قطع دجاج كيكرز + 4 بطاطا مقلية + 3 كراونيز + 3 x 2.28 لتر بيبسي.",
         english:
-          "Get 10 Large Pizzas + 3 x 10 Chicken Kickers + 4 Potato Wedges + 3 Crownies + 3 x 2.28L Pepsi.",
+          "Получите 10 больших пицц + 3 × 10 куриных наггетсов + 4 картофельные дольки + 3 Крауни + 3 × 2.28 л Pepsi",
       },
     },
   ];
@@ -77,8 +77,8 @@ const OffersPage = ({ isArabic }) => {
     navigate("/checkout", { state: { offer: [offer] } });
   };
 
-  const heading = isArabic ? "العروض" : "OFFERS";
-  const view = isArabic ? "عرض الكل" : "VIEW ALL";
+  const heading = isArabic ? "العروض" : "АКЦИИ";
+  const view = isArabic ? "عرض الكل" : "СМОТРЕТЬ ВСЕ";
 
   return (
     <section>

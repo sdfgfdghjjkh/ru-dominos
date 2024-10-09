@@ -63,14 +63,14 @@ const productItems = [
   {
     name: {
       arabic: "بينير تكا بيتزا",
-      english: "Paneer Tikka Pizza",
+      english: "Панир Тикка",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "بينير تكا طازج مع فلفل أحمر وأخضر وبصل وموزاريلا وصلصة مارينارا الخاصة مع صلصة النعناع.",
       english:
-        "Fresh Paneer Tikka with red & green pepper, Onion, mozzarella and signature Marinara sauce topped with Mint sauce.",
+        "Свежий панир тикка с красным и зеленым перцем, луком, моцареллой и фирменным соусом Маринара, покрытый мятным соусом.",
     },
     image: PaneerTikkaPizza,
     prices: {
@@ -78,17 +78,18 @@ const productItems = [
       28: 47,
       33: 57,
     },
+    id: "p1",
   },
   {
     name: {
       arabic: "بيتزا الجبن الأربعة",
-      english: "Four Cheese Pizza",
+      english: "Четыре сыра",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "صلصة البيتزا، جبن أمريكي، طبقتين من الموزاريلا، جبنة فيتا وزعتر",
       english:
-        "Pizza Sauce, American Cheese, 2 Layers of Mozzarella, Feta Cheese & Oregano",
+        "Соус для пиццы, американский сыр, 2 слоя моцареллы, сыр фета и орегано.",
     },
     image: FourCheesePizza,
     prices: {
@@ -96,19 +97,20 @@ const productItems = [
       28: 47,
       33: 57,
     },
+    id: "p2",
   },
 
   {
     name: {
       arabic: "بيتزا الفلفل الأحمر والرانش",
-      english: "Veggie Legend Jalapenos & Ranch Pizza",
+      english: "Ранчо-Пицца",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "بصل، فلفل أحمر، زيتون أسود، جالابينو، موزاريلا، جبن أمريكي مع صلصة الرانش (تحتوي صلصة الرانش على البيض).",
       english:
-        "Onions, red pepper, black olives, jalapenos, mozzarella, American cheese with ranch sauce (Ranch sauce contains egg).",
+        "Лук, красный перец, черные оливки, перец халапеньо, моцарелла, американский сыр с соусом ранчо (соус ранчо содержит яйцо).",
     },
     image: VeggieLegendJalapenos,
     prices: {
@@ -116,18 +118,19 @@ const productItems = [
       28: 47,
       33: 57,
     },
+    id: "p3",
   },
   {
     name: {
       arabic: "بيتزا تكا الدجاج",
-      english: "Chicken Tikka Pizza",
+      english: "Тикка с курицей",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "صلصة البيتزا، موزاريلا، دجاج تكا، بصل، فلفل أخضر مع صلصة النعناع.",
       english:
-        "Pizza Sauce, Mozzarella, Chicken Tikka, Onions, Green Peppers with Mint Sauce",
+        "Соус для пиццы, моцарелла, курица Тикка, лук, зеленый перец с мятным соусом.",
     },
     image: ChickenTikkaPizza,
     prices: {
@@ -135,17 +138,18 @@ const productItems = [
       28: 47,
       33: 57,
     },
+    id: "p4",
   },
   {
     name: {
       arabic: "بيتزا شيز ستيك فيلادلفيا",
-      english: "Philly Cheese Steak Pizza",
+      english: "Филадельфия Чиз Стейк",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "جبن أمريكي، شرائح لحم بقري، فلفل أخضر، بصل، فطر وموزاريلا.",
       english:
-        "American Cheese, Slices of Beef Steak, Green Peppers, Onions, Mushrooms & Mozzarella",
+        "Американский сыр, кусочки говяжьего стейка, зеленый перец, лук, грибы и моцарелла.",
     },
     image: PhillyCheeseSteakPizza,
     prices: {
@@ -153,18 +157,19 @@ const productItems = [
       28: 47,
       33: 57,
     },
+    id: "p5",
   },
   {
     name: {
       arabic: "بيتزا فيلادلفيا الديناميت",
-      english: "Philly Cheese Steak Dynamite Pizza",
+      english: "Филадельфия Чиз Стейк Динамит",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "جبن أمريكي، شرائح لحم بقري، فلفل أخضر، بصل، فطر وموزاريلا مع صلصة الديناميت.",
       english:
-        "American Cheese, Slices of Beef Steak, Green Peppers, Onions, Mushrooms, Mozzarella with Dynamite Sauce",
+        "Американский сыр, кусочки говяжьего стейка, зеленый перец, лук, грибы, моцарелла с соусом динамит.",
     },
     image: PhillyCheeseSteakDynamitePizza,
     prices: {
@@ -172,18 +177,19 @@ const productItems = [
       28: 47,
       33: 57,
     },
+    id: "p6",
   },
   {
     name: {
       arabic: "بيتزا إكسترافاغانزا",
-      english: "Extravaganzza Pizza",
+      english: "Феерия",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "صلصة البيتزا، موزاريلا، بيف بيبروني، بصل، فلفل أخضر، فطر، زيتون أسود، بقر، نقانق إيطالية وطبقة إضافية من الموزاريلا.",
       english:
-        "Pizza Sauce, Mozzarella, Beef Pepperoni, Onions, Green Peppers, Mushrooms, Black Olives, Beef, Italian Sausage & Extra layer of Mozzarella",
+        "Соус для пиццы, моцарелла, пепперони из говядины, лук, зеленый перец, грибы, черные оливки, говядина, итальянская колбаса и дополнительный слой моцареллы.",
     },
     image: ExtravaganzzaPizza,
     prices: {
@@ -191,18 +197,19 @@ const productItems = [
       28: 47,
       33: 57,
     },
+    id: "p7",
   },
   {
     name: {
       arabic: "بيتزا الدجاج الديناميت",
-      english: "Chicken Dynamite Pizza",
+      english: "Куриный динамит",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "جبن أمريكي، فلفل أخضر، بصل، صدر دجاج مقرمش، موزاريلا، زعتر مع صلصة الديناميت.",
       english:
-        "American Cheese, Green Peppers, Onions, Crunchy Chicken Breast, Mozzarella, Oregano with Dynamite Sauce",
+        "Американский сыр, зеленый перец, лук, хрустящая куриная грудка, моцарелла, орегано с соусом динамит.",
     },
     image: ChickenDynamitePizza,
     prices: {
@@ -214,14 +221,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الدجاج الحار الديناميت",
-      english: "Chicken Hot Dynamite Pizza",
+      english: "Куриный горячий динамит",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "جبن أمريكي، فلفل أخضر، بصل، صدر دجاج مقرمش، موزاريلا، زعتر مع صلصة الديناميت وصلصة بفلو باردة.",
       english:
-        "American Cheese, Green Peppers, Onions, Crunchy Chicken Breast, Mozzarella, Oregano with Dynamite & Hot Buffalo Sauces",
+        "Американский сыр, зеленый перец, лук, хрустящая куриная грудка, моцарелла, орегано с динамитом и острыми соусами из буйволиного мяса.",
     },
     image: ChickenHotDynamitePizza,
     prices: {
@@ -233,14 +240,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الدجاج والجالابينو الأسطورية مع الرانش",
-      english: "Legend Chicken Ranch & Jalapeno Pizza",
+      english: "Легендарное куриное ранчо и халапеньо",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "American Cheese, Grilled Chicken Breast, Onions, Mozzarella, Jalapeno, Oregano & Ranch Sauce",
       english:
-        "American Cheese, Grilled Chicken Breast, Onions, Mozzarella, Jalapeno, Oregano & Ranch Sauce",
+        "Американский сыр, куриная грудка на гриле, лук, моцарелла, халапеньо, орегано и соус ранч.",
     },
     image: LegendChickenRanch,
     prices: {
@@ -252,14 +259,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الدجاج فاست",
-      english: "Chicken Feast Pizza",
+      english: "Куриный праздник",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "محملة بمزيج لذيذ من الدجاج المشوي والأشهر مع الدجاج الرائع وتوابلها بالجالابينو وشرائح الفلفل الأحمر.",
       english:
-        "Loaded with a delicious combination of grilled chicken, famous chicken kickers and premium Chicken, spicing it up with jalapeno and red pepper slices.",
+        "Насыщен восхитительным сочетанием курицы-гриль, знаменитых куриных коктейлей и курицы премиум-класса, приправленной халапеньо и ломтиками красного перца.",
     },
     image: ChickenFeastPizza,
     prices: {
@@ -271,14 +278,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا ألفريدو",
-      english: "Alfredo Pizza",
+      english: "Альфредо",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "صلصة ألفريدو الأصلية، قطع صدر دجاج مشوي، جبن موزاريلا، شرائح فطر طازجة.",
       english:
-        "Original Alfredo Sauce, Grilled Chicken Breast Pieces, Mozzarella Cheese, Slices of Fresh Mushroom",
+        "Оригинальный соус Альфредо, кусочки куриной грудки гриль, сыр Моцарелла, кусочки свежих грибов.",
     },
     image: AlfredoPizza,
     prices: {
@@ -292,12 +299,12 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا مارغريتا",
-      english: "Margherita Pizza",
+      english: "Маргарита",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "صلصة البيتزا وجبنة الموزاريلا.",
-      english: "Pizza Sauce & Mozzarella",
+      english: "Пицца-соус и моцарелла",
     },
     image: MargheritaPizza,
     prices: {
@@ -309,13 +316,13 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الخضار",
-      english: "Veggie Pizza",
+      english: "Вегетарианская",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "صلصة البيتزا، موزاريلا، بصل، فلفل أخضر، فطر وزيتون أسود.",
       english:
-        "Pizza Sauce, Mozzarella, Onions, Green Peppers, Mushrooms & Black Olives",
+        "Соус для пиццы, моцарелла, лук, зеленый перец, грибы и черные оливки.",
     },
     image: VeggiePizza,
     prices: {
@@ -327,14 +334,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الموجة الخضراء المكسيكية",
-      english: "Mexican Green Wave Pizza",
+      english: "Мексиканская пицца «Зеленая волна»",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "بيتزا محشوة بالبصل المقرمش، فلفل الكابسيكوم اللذيذ والجالابينو مع الأعشاب المكسيكية.",
       english:
-        "A pizza loaded with Crunchy Onions, Crisp Capsicum and Jalapeno with Mexican Herb.",
+        "Пицца с хрустящим луком, хрустящим перцем и халапеньо с мексиканскими травами.",
     },
     image: MexicanGreenWavePizza,
     prices: {
@@ -346,12 +353,12 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا بيبروني",
-      english: "Pepperoni Pizza",
+      english: "Пепперони",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "صلصة البيتزا، موزاريلا وبيف بيبروني.",
-      english: "Pizza Sauce, Mozzarella & Beef Pepperoni",
+      english: "Соус для пиццы, моцарелла и пепперони из говядины.",
     },
     image: PepperoniPizza,
     prices: {
@@ -363,13 +370,13 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الدجاج والرانش الأسطورية",
-      english: "Legend Chicken Ranch Pizza",
+      english: "Легенда Куриного Ранчо",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "جبن أمريكي، صدر دجاج مشوي، بصل، موزاريلا، زعتر مع صلصة الرانش.",
       english:
-        "American Cheese, Grilled Chicken Breast, Onions, Mozzarella, Oregano with Ranch Sauce",
+        "Американский сыр, куриная грудка гриль, лук, моцарелла, орегано, соус ранчо.",
     },
     image: LegendChickenRanchPizza,
     prices: {
@@ -381,14 +388,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الدجاج والباربيكيو الأسطورية",
-      english: "Legend Chicken BBQ Pizza",
+      english: "Шашлычная",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "جبن أمريكي، صدر دجاج مشوي، بصل، موزاريلا، زعتر مع صلصة الباربيكيو.",
       english:
-        "American Cheese, Grilled Chicken Breast, Onions, Mozzarella, Oregano with BBQ Sauce",
+        "Американский сыр, куриная грудка на гриле, лук, моцарелла, орегано с соусом барбекю.",
     },
     image: LegendChickenBBQPizza,
     prices: {
@@ -400,12 +407,12 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا هاواي",
-      english: "Hawaiian Pizza",
+      english: "Гавайская",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "صلصة البيتزا، موزاريلا وبيف بيبروني وأناناس هاواي.",
-      english: "Pizza Sauce, Mozzarella, Beef Pepperoni & Hawaiian Pineapple",
+      english: "Соус для пиццы, моцарелла, пепперони из говядины и гавайский ананас.",
     },
     image: HawaiianPizza,
     prices: {
@@ -417,12 +424,12 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الدجاج ميمفيس الباربيكيو",
-      english: "Chicken Memphis BBQ Pizza",
+      english: "Куриный Мемфис Барбекю",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "صلصة الباربيكيو، موزاريلا، صدر دجاج مشوي وبصل.",
-      english: "BBQ Sauce, Mozzarella, Grilled Chicken Breast & Onions",
+      english: "Соус барбекю, моцарелла, куриная грудка гриль и лук.",
     },
     image: ChickenMemphisBBQPizza,
     prices: {
@@ -434,14 +441,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا ميتزا",
-      english: "Meatzza Pizza",
+      english: "Митца",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "صلصة البيتزا، موزاريلا، بيف بيبروني، بقر، نقانق إيطالية وطبقة إضافية من الموزاريلا.",
       english:
-        "Pizza Sauce, Mozzarella, Beef Pepperoni, Beef, Italiano Sausage & Extra layer of Mozzarella",
+        "Соус для пиццы, моцарелла, пепперони из говядины, говядина, итальянская колбаса и дополнительный слой моцареллы.",
     },
     image: MeatzzaPizza,
     prices: {
@@ -453,14 +460,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا تكس مكس",
-      english: "Tex Mex Pizza",
+      english: "Техас-Мексика",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "صلصة البيتزا، موزاريلا، بصل، فلفل أخضر، زيتون أسود، صدر دجاج مشوي، جالابينو وزعتر.",
       english:
-        "Pizza Sauce, Mozzarella, Onions, Green Peppers, Black Olives, Grilled Chicken Breast, Jalapeno & Oregano",
+        "Соус для пиццы, моцарелла, лук, зеленый перец, черные оливки, куриная грудка гриль, халапеньо и орегано.",
     },
     image: TexMexPizza,
     prices: {
@@ -472,13 +479,13 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا إيطاليو",
-      english: "Italiano Pizza",
+      english: "Итальяно",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "صلصة البيتزا، موزاريلا، بيف بيبروني، فطر ونقانق إيطالية.",
       english:
-        "Pizza Sauce, Mozzarella, Beef Pepperoni, Mushrooms & Italian Sausage",
+        "Соус для пиццы, моцарелла, пепперони из говядины, грибы и итальянская колбаса.",
     },
     image: ItalianoPizza,
     prices: {
@@ -490,13 +497,13 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا حار وحار",
-      english: "Hot & Spicy Pizza",
+      english: "Острая",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic: "صلصة البيتزا، موزاريلا، بصل، فلفل أخضر، جالابينو وبيف.",
       english:
-        "Pizza Sauce, Mozzarella, Onions, Green Peppers, Jalapeno & Beef",
+        "Соус для пиццы, моцарелла, лук, зеленый перец, халапеньо и говядина.",
     },
     image: SpicyPizza,
     prices: {
@@ -508,14 +515,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا ديلوكس",
-      english: "Deluxe Pizza",
+      english: "Делюкс",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "صلصة البيتزا، موزاريلا، بيف بيبروني، بصل، فلفف أخضر، فطر ونقانق إيطالية.",
       english:
-        "Pizza Sauce, Mozzarella, Beef Pepperoni, Onions, Green Peppers, Mushrooms & Italian Sausage",
+        "Соус для пиццы, моцарелла, пепперони из говядины, лук, зеленый перец, грибы и итальянская колбаса.",
     },
     image: DeluxePizza,
     prices: {
@@ -527,14 +534,14 @@ const productItems = [
   {
     name: {
       arabic: "بيتزا الدجاج الحار",
-      english: "Legend Chicken Hot Pizza",
+      english: "Жгучая",
     },
-    category: "Pizzas",
+    category: "pizza",
     description: {
       arabic:
         "جبن أمريكي، صدر دجاج مشوي، بصل، موزاريلا، زعتر مع صلصة البفلو الحارة.",
       english:
-        "American Cheese, Grilled Chicken Breast, Onions, Mozzarella, Oregano with Hot Buffalo Sauce",
+        "Американский сыр, куриная грудка на гриле, лук, моцарелла, орегано с острым соусом из буйволиного мяса",
     },
     image: LegendChickenHotPizza,
     prices: {
@@ -548,14 +555,14 @@ const productItems = [
   {
     name: {
       arabic: "شيكن كيكرز",
-      english: "Chicken Kickers",
+      english: "Куриные Кикеры",
     },
-    category: "Chicken",
+    category: "chicken",
     description: {
       arabic:
         "صدور دجاج مقرمشة مع نكهة صلصة بفلو باربيكيو حارة، يتم تقديمها مع صلصة الرانش وصلصة بفلو باربيكيو جانبية.",
       english:
-        "Crunchy Chicken Breast with a Hint of Hot Buffalo Sauce Flavor, Served with Ranch & Hot Buffalo Sauces on the side.",
+        "Хрустящая куриная грудка с нотками острого соуса Буффало, подается с ранчо и острыми соусами Буффало.",
     },
     image: ChickenKickers,
     price: 25,
@@ -563,14 +570,14 @@ const productItems = [
   {
     name: {
       arabic: "أجنحة الدجاج بصلصة باربيكيو",
-      english: "Chicken Wings BBQ Wings",
+      english: "Куриные Крылья Барбекю",
     },
-    category: "Chicken",
+    category: "chicken",
     description: {
       arabic:
         "أجنحة دجاج طرية بنكهة صلصة باربيكيو، يتم تقديمها مع صلصة الرانش جانبية.",
       english:
-        "Tender Chicken Wings in BBQ Flavor, Served with Ranch Sauce on the side.",
+        "Нежные куриные крылышки со вкусом барбекю, подаются с соусом Ранч.",
     },
     image: ChickenWingsBBQ,
     price: 25,
@@ -578,13 +585,13 @@ const productItems = [
   {
     name: {
       arabic: "أجنحة الدجاج بصلصة حارة",
-      english: "Chicken Wings Hot Wings",
+      english: "Куриные Горячие Крылышки",
     },
-    category: "Chicken",
+    category: "chicken",
     description: {
       arabic: "أجنحة دجاج طرية بنكهة حارة، يتم تقديمها مع صلصة الرانش جانبية.",
       english:
-        "Tender Chicken Wings in Hot Flavor, Served with Ranch Sauce on the side.",
+        "Нежные куриные крылышки с острым вкусом, подаются с соусом Ранч.",
     },
     image: ChickenWingsHot,
     price: 25,
@@ -594,14 +601,14 @@ const productItems = [
   {
     name: {
       arabic: "عصا الجبن المبشورة",
-      english: "Cheesy Bread Sticks",
+      english: "Сырные хлебные палочки",
     },
-    category: "Sides",
+    category: "side",
     description: {
       arabic:
         "عصي يدوية مغطاة بالموزاريلا، يتم تقديمها مع صلصة المارينارا جانبيةً.",
       english:
-        "Hand Tossed Sticks Covered with Mozzarella, Served with Marinara Sauce on the side.",
+        "Брошенные вручную палочки, покрытые моцареллой, подаются с соусом Маринара.",
     },
     image: CheesyBreadSticks,
     price: 12,
@@ -609,14 +616,14 @@ const productItems = [
   {
     name: {
       arabic: "عصي الخبز",
-      english: "Bread Sticks",
+      english: "Хлебные палочки",
     },
-    category: "Sides",
+    category: "side",
     description: {
       arabic:
         "عصي يدوية مدهونة بالزبدة ومخبوزة حتى تصبح ذهبية اللون، يتم تقديمها مع صلصة المارينارا جانبيةً.",
       english:
-        "Buttery Hand Tossed Sticks Baked to a Golden Brown, Served with Marinara Sauce on the side.",
+        "Палочки с маслом, запеченные вручную до золотистого цвета, подаются с соусом Маринара.",
     },
     image: BreadSticks,
     price: 10,
@@ -624,14 +631,14 @@ const productItems = [
   {
     name: {
       arabic: "عصي الجبن المحشوة بالفاهيتا",
-      english: "Stuffed Cheesy Bread Fajita Bread",
+      english: "Фаршированный сырный хлеб фахита",
     },
-    category: "Sides",
+    category: "side",
     description: {
       arabic:
         "محشوة بالموزاريلا، صدر دجاج مشوي وفلفل حار، يتم تقديمها مع صلصة المارينارا جانبيةً.",
       english:
-        "Stuffed with Mozzarella, Grilled Chicken Breast & Jalapeno, Served with Marinara Sauce on the side.",
+        "Фаршированная моцареллой, куриной грудкой на гриле и халапеньо, подается с соусом Маринара.",
     },
     image: StuffedCheesy,
     price: 12,
@@ -639,14 +646,14 @@ const productItems = [
   {
     name: {
       arabic: "عصي الجبن المحشوة بالإيطاليو",
-      english: "Stuffed Cheesy Bread Italiano Bread",
+      english: "Фаршированный сырный хлеб",
     },
-    category: "Sides",
+    category: "side",
     description: {
       arabic:
         "محشوة بالموزاريلا، بيف بيبروني، فلفل أخضر وبصل، يتم تقديمها مع صلصة المارينارا جانبيةً.",
       english:
-        "Stuffed with Mozzarella, Beef Pepperoni, Green Peppers & Onions, Served with Marinara Sauce on the side.",
+        "Фаршированные моцареллой, говяжьим пепперони, зеленым перцем и луком, подаются с соусом Маринара.",
     },
     image: StuffedCheesy,
     price: 12,
@@ -658,7 +665,7 @@ const productItems = [
       arabic: "7 أب",
       english: "7 Up",
     },
-    category: "Drinks",
+    category: "drink",
     description: {
       arabic: "",
       english: "",
@@ -669,9 +676,9 @@ const productItems = [
   {
     name: {
       arabic: "دايت بيبسي",
-      english: "Diet Pepsi",
+      english: "Диет. Pepsi",
     },
-    category: "Drinks",
+    category: "drink",
     description: {
       arabic: "",
       english: "",
@@ -684,7 +691,7 @@ const productItems = [
       arabic: "بيبسي",
       english: "Pepsi",
     },
-    category: "Drinks",
+    category: "drink",
     description: {
       arabic: "",
       english: "",
@@ -695,9 +702,9 @@ const productItems = [
   {
     name: {
       arabic: "ميرندا برتقال",
-      english: "Orange Mirinda",
+      english: "Mirinda",
     },
-    category: "Drinks",
+    category: "drink",
     description: {
       arabic: "",
       english: "",
@@ -708,9 +715,9 @@ const productItems = [
   {
     name: {
       arabic: "ماء",
-      english: "Water",
+      english: "Вода",
     },
-    category: "Drinks",
+    category: "drink",
     description: {
       arabic: "",
       english: "",
@@ -723,14 +730,14 @@ const productItems = [
   {
     name: {
       arabic: "عصي القرفة",
-      english: "Cinnamon Sticks",
+      english: "Палочки корицы",
     },
-    category: "Desserts",
+    category: "dessert",
     description: {
       arabic:
         "عصي يدوية مدهونة بالزبدة ومزينة بالقرفة، يتم تقديمها مع صلصة الجلي الحلوة جانبيةً.",
       english:
-        "Buttery Hand Tossed Sticks Drizzled with Cinnamon, Served with Sweet Icing Sauce on the side.",
+        "Палочки с маслом, брошенные вручную, посыпанные корицей, подаются со сладким соусом из глазури.",
     },
     image: CinnamonSticks,
     price: 14,
@@ -738,14 +745,14 @@ const productItems = [
   {
     name: {
       arabic: "عصي القرفة مع الأناناس",
-      english: "Cinnamon Sticks with Pineapple",
+      english: "Палочки корицы с ананасом",
     },
-    category: "Desserts",
+    category: "dessert",
     description: {
       arabic:
         "عصي يدوية مدهونة بالزبدة ومزينة بالقرفة والأناناس، يتم تقديمها مع صلصة الجلي الحلوة جانبيةً.",
       english:
-        "Buttery Hand Tossed Sticks Drizzled with Cinnamon & Pineapple, Served with Sweet Icing Sauce on the side.",
+        "Палочки с маслом, брошенные вручную, сбрызнутые корицей и ананасом, подаются со сладким соусом из глазури.",
     },
     image: CinnamonSticksWithPineapple,
     price: 16,
@@ -753,13 +760,13 @@ const productItems = [
   {
     name: {
       arabic: "",
-      english: "Chocolate Lava Souffle",
+      english: "Шоколадное лавовое суфле",
     },
-    category: "Desserts",
+    category: "dessert",
     description: {
       arabic: "",
       english:
-        "Baked Chocolate Cake with Molten Chocolate Fudge on the Inside.",
+        "Запеченный шоколадный торт с расплавленной шоколадной помадкой внутри.",
     },
     image: ChocolateLavaSouffle,
     price: 12,
@@ -767,12 +774,12 @@ const productItems = [
   {
     name: {
       arabic: "",
-      english: "Crownies",
+      english: "Крауни",
     },
-    category: "Desserts",
+    category: "dessert",
     description: {
       arabic: "",
-      english: "Baked Fudge Brownie Mixed with Milk Chocolate Cookies.",
+      english: "Запеченный брауни с помадкой, смешанный с печеньем из молочного шоколада.",
     },
     image: Crownies,
     price: 25,
@@ -782,9 +789,9 @@ const productItems = [
   {
     name: {
       arabic: "صلصة باربيكيو",
-      english: "BBQ Sauce",
+      english: "Соус барбекю",
     },
-    category: "Extras",
+    category: "extra",
     description: {
       arabic: "",
       english: "",
@@ -795,9 +802,9 @@ const productItems = [
   {
     name: {
       arabic: "صلصة بفلو حارة",
-      english: "Hot Buffalo Sauce",
+      english: "Острый соус Баффало",
     },
-    category: "Extras",
+    category: "extra",
     description: {
       arabic: "",
       english: "",
@@ -808,9 +815,9 @@ const productItems = [
   {
     name: {
       arabic: "صلصة كيتشب",
-      english: "Ketchup",
+      english: "Кетчуп",
     },
-    category: "Extras",
+    category: "extra",
     description: {
       arabic: "",
       english: "",
@@ -821,9 +828,9 @@ const productItems = [
   {
     name: {
       arabic: "صلصة المارينارا",
-      english: "Marinara Sauce",
+      english: "Соус Маринара",
     },
-    category: "Extras",
+    category: "extra",
     description: {
       arabic: "",
       english: "",
@@ -834,9 +841,9 @@ const productItems = [
   {
     name: {
       arabic: "صلصة الرانش",
-      english: "Ranch Sauce",
+      english: "Соус Ранч",
     },
-    category: "Extras",
+    category: "extra",
     description: {
       arabic: "",
       english: "",
@@ -847,9 +854,9 @@ const productItems = [
   {
     name: {
       arabic: "صلصة الجلي الحلوة",
-      english: "Sweet Icing Sauce",
+      english: "Сладкий соус-глазурь",
     },
-    category: "Extras",
+    category: "extra",
     description: {
       arabic: "",
       english: "",

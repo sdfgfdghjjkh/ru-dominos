@@ -11,10 +11,10 @@ const ProductItem = ({ product, isArabic, categoryName, index, notify }) => {
         className="add_to_order_btn"
         onClick={() => notify(product, selectedSize)}
       >
-        {isArabic ? "طلب" : "ORDER"}
+        {isArabic ? "طلب" : "КУПИТЬ"}
       </button>
 
-      {categoryName === "Pizzas" ? (
+      {categoryName === "pizza" ? (
         <div className="selector">
           <ul>
             {product.prices &&
@@ -35,14 +35,14 @@ const ProductItem = ({ product, isArabic, categoryName, index, notify }) => {
 
       <div className={`product-heading ${isArabic ? "rtl" : "ltr"}`}>
         <h2>{isArabic ? product.name.arabic : product.name.english}</h2>
-        {categoryName === "Drinks" && <h2>{isArabic ? "1 لتر" : "1 liter"}</h2>}
+        {categoryName === "drink" && <h2>{isArabic ? "1 لتر" : "1л"}</h2>}
       </div>
 
       <p className={`${isArabic ? "rtl" : "ltr"}`}>
         {isArabic ? product.description.arabic : product.description.english}
       </p>
 
-      {categoryName === "Pizzas" && (
+      {categoryName === "pizza" && (
         <div className="pizza-size-selector">
           {/* <select
                   value={selectedSize}

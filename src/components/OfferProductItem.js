@@ -23,11 +23,11 @@ const OfferProductItem = ({ index, product, choosePizza, isArabic }) => {
       </div>
       {product.choosen ? (
         <button onClick={() => choosePizza(product)} className="added_to_order_btn">
-          {isArabic ? "مختار" : "CHOOSEN"}
+          {isArabic ? "مختار" : "ВЫБРАНО"}
         </button>
       ) : (
         <button onClick={() => choosePizza(product, selectedSize)} className="add_to_order_btn">
-          {isArabic ? "يختار" : "CHOOSE"}
+          {isArabic ? "يختار" : "ВЫБРАТЬ"}
         </button>
       )}
       <h2 className={`product-heading ${isArabic ? "rtl" : "ltr"}`}>

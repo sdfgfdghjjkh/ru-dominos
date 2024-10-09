@@ -10,7 +10,7 @@ const Size = ({ el, id, activeTypes, setActiveTypes, setSelectedSize }) => {
         setSelectedSize(+el);
       }}
       key={id}>
-      {el} cm
+      {el} см
     </li>
   );
 };
